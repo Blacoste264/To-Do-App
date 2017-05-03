@@ -1,41 +1,34 @@
+//module
 (function() {
   'use strict';
 
   angular
-    .module('app', []);
+    .module('toDoAppList', []);
 })();
-
+//controller
 (function() {
   'use strict';
 
   angular
-    .module('app')
-    .controller('MainController', MainController);
+    .module('toDoAppList')
+    .controller('ToDoController', ToDoController);
 
-  MainController.$inject = [];
+  ToDoController.$inject = [];
 
   /* @ngInject */
-  function MainController() {
+  function ToDoController() {
     var vm = this;
-    vm.title = "MainController";
-    vm.name = "Brittany";
-    //todo list
-    vm.todos = [{
-      taskName: "Write an Angular js Tutorial for Todo-List"
-    }];
-
-    //add new todo
-    vm.addTodo = function() {
-      vm.todos.push({
-        taskName: vm.newTodo,
+    vm.toDoItem = "";
+    vm.toDoList = [];
+//add new list item
+    vm.add = function() {
+      vm.toDoList.push({
+        todo: vm.toDoObject.toDoItem,
+        priority: vm.toDoObject.priorities
       });
-      vm.newTodo = ""; //Reset the text field.
-    };
-
-    activate();
-
-    function activate() {
-
     }
+
   }
+
+
 })();
