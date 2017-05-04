@@ -1,9 +1,12 @@
-.high {
-  background-color: red;
+.panel {
+  box-shadow: 3px 9px 9px;
 }
-.medium {
-  background-color: yellow;
+input {
+  border-radius: 10%;
+  box-shadow: 0px 2px 5px grey;
+  border: grey solid .5px;
+  margin-left: 5px;
 }
-.low {
-  background-color: green;
+select {
+  box-shadow: 0px 2px 5px grey;
 }
