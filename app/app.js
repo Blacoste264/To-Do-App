@@ -5,7 +5,7 @@
   angular
     .module('toDoAppList', []);
 })();
-//controller
+//Main controller
 (function() {
   'use strict';
 
